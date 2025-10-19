@@ -10,3 +10,10 @@ function getRemainingKilometersTemplate(){
     <p>${kmLeft}</p>
     `
 }
+
+function getAverageRemainingKmTemplate(){
+    return `
+        <h3>Ø verbleibende km/Monat</h3>
+        <p>${avgKm}</p>
+    `
+}
