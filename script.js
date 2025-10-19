@@ -10,6 +10,7 @@ function init() {
 
 function renderAll() {
     renderToday();
+    renderRemainingKilometers();
 }
 
 function inputEventListener() {
@@ -23,5 +24,7 @@ function inputEventListener() {
 
 function calculateRemainingKilometers(km){
     kmLeft = KM_TARGET - km;
+    renderRemainingKilometers();
 }
+
 

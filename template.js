@@ -4,4 +4,10 @@ function getTodayTemplate(){
     `
 }
 
+function getRemainingKilometersTemplate(){
+    return `
+    <h3>verbleibende Kilometer</h3>
+    <p>${kmLeft}</p>
 
+    `
+}
