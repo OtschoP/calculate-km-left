@@ -1,7 +1,7 @@
 const today = new Date();
 const KM_TARGET = 12761;
 const END_DATE = new Date("2026-10-10");
-let kmLeft = "";
+let kmLeft = "gefahrene Kilometer eintragen";
 
 function init() {
     renderAll()
