@@ -2,6 +2,7 @@ const today = new Date();
 const KM_TARGET = 12761;
 const END_DATE = new Date("2026-10-10");
 let kmLeft = "gefahrene Kilometer eintragen";
+let drivenKm = "bereits verbrauchte Kilometer";
 let avgKm = "hier erscheint der Durchschnitt";
 
 function init() {
@@ -13,17 +14,24 @@ function renderAll() {
     renderToday();
     renderRemainingKilometers();
     renderAverageRemainingKm();
+    renderDrivenKilometers();
 }
 
 function inputEventListener() {
     document.getElementById('km-input').addEventListener('input', () => {
         const km = parseFloat(document.getElementById('km-input').value);
         if (!Number.isNaN(km)) {
+            calculateDrivenKilometers(km);
             calculateRemainingKilometers(km);
             calculateAverageRemainingKmPerMonth();
             renderAverageRemainingKm();
         }
     });
+}
+
+function calculateDrivenKilometers(km){
+    drivenKm = km - 761;
+    renderDrivenKilometers();
 }
 
 function calculateRemainingKilometers(km){

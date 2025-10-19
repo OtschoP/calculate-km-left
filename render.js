@@ -4,6 +4,11 @@ function renderToday(){
     html.innerHTML = getTodayTemplate();
 }
 
+function renderDrivenKilometers(){
+    const html = document.getElementById('driven-km');
+    html.innerHTML = getDrivenKilometersTemplate();
+}
+
 function renderRemainingKilometers(){
     const html = document.getElementById('remaining-kilometers');
     html.innerHTML = getRemainingKilometersTemplate();

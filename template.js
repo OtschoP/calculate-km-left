@@ -4,6 +4,13 @@ function getTodayTemplate(){
     `
 }
 
+function getDrivenKilometersTemplate(){
+    return `
+        <h3>verbrauchte Kilometer</h3>
+        <p>${drivenKm}</p>
+    `
+}
+
 function getRemainingKilometersTemplate(){
     return `
     <h3>verbleibende Kilometer</h3>
@@ -17,3 +24,7 @@ function getAverageRemainingKmTemplate(){
         <p>${avgKm}</p>
     `
 }
+
+
+
+
