@@ -104,14 +104,14 @@ main > div {
     font-weight: 600;
 }
 
-#remaining-kilometers h3 {
+h3 {
     margin: 16px 0 6px;
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--text-secondary);
 }
 
-#remaining-kilometers p {
+p {
     margin: 0;
     font-size: 1.2rem;
     font-weight: 600;
