@@ -27,4 +27,15 @@ function calculateRemainingKilometers(km){
     renderRemainingKilometers();
 }
 
+function calculateAverageRemainingKmPerMonth(){
+    const monthsLeft = (END_DATE.getFullYear() - today.getFullYear() * 12 + (END_DATE.getMonth() - today.getMonth()));
+
+    if (monthsLeft <= 0) {
+        return 0; // Vertrag beendet
+    }
+
+    const avgKmPerMonth = kmLeft / monthsLeft;
+    return avgKmPerMonth.toFixed(0);
+}
+
 
