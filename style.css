@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* Mobile-first styling optimized for iPhone-sized displays */
+:root {
+    --bg-gradient: linear-gradient(160deg, #0f172a, #111827 45%, #1f2937);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-blur: blur(18px);
+    --accent: #38bdf8;
+    --accent-soft: rgba(56, 189, 248, 0.2);
+    --text-primary: #f9fafb;
+    --text-secondary: #cbd5f5;
+    --shadow-soft: 0 18px 28px rgba(15, 23, 42, 0.35);
+    --font-base: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 16px 32px;
+    font-family: var(--font-base);
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+}
+
+header {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding: 18px 12px;
+    margin-bottom: 12px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    letter-spacing: 0.02em;
+}
+
+main {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+main > div {
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    border-radius: 18px;
+    padding: 18px 22px;
+    box-shadow: var(--shadow-soft);
+}
+
+#today p {
+    margin: 0;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#kilometers-travelled {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#km-input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    background: rgba(15, 23, 42, 0.55);
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    
+}
+
+#km-input::placeholder {
+    color: rgba(203, 213, 225, 0.7);
+}
+
+#km-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+    transform: translateY(-1px);
+}
+
+#remaining-kilometers h2 {
+    margin: 0 0 6px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#remaining-kilometers h3 {
+    margin: 16px 0 6px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+#remaining-kilometers p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#km-per-month {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    body {
+        padding-top: 48px;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    main {
+        gap: 22px;
+    }
+
+    main > div {
+        border-radius: 20px;
+        padding: 22px 28px;
+    }
+}
